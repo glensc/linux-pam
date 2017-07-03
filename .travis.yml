@@ -110,6 +110,7 @@ install:
 script:
   - $COMPILER --version
   - autopoint --version
+  - git fetch --tags
   - git revert -n 58d2da7160a477a5f5654be08bb36cc475eb75d7
   - ./autogen.sh
   - ./configure CC=$COMPILER --disable-prelude --enable-regenerate-docu
